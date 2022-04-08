@@ -3,14 +3,15 @@ const axios = require("axios");
 const fs = require("fs");
 const path = require("path");
 /* Set the API endpoint and out directory */
-const API_ENDPOINT = "https://www.klpzmedia.com/apis/1.0";
+const API_ENDPOINT = "API_ENDPOINT";
 const OUT_DIRECTORY_PATH = path.join(__dirname, "data.json");
 /* Header required to authenticate with the API */
 const axiosClient = axios.create({
     baseURL: API_ENDPOINT,
     timeout: 1000,
     headers: {
-        Authorization: "FuLYQH8zYjb55faG"
+        /* Enter your auth token here */
+        Authorization: "AUTH_TOKEN"
     },
 });
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
